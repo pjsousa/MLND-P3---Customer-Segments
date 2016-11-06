@@ -12081,7 +12081,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li><p><strong>For sample 0</strong>: For Sample 0: This is the biggest client of the three. Its expenses on fresh, frozen and delicatessen are above average and the expenses on milk and grocery are kind of 'close' to it. Given the distribution of expenses between categories, I would say that maybe this customer is either a market or a big restaurant.</p>
+<li><p><strong>For sample 0</strong>: This is the biggest client of the three. Its expenses on fresh, frozen and delicatessen are above average and the expenses on milk and grocery are kind of 'close' to it. Given the distribution of expenses between categories, I would say that maybe this customer is either a market or a big restaurant.</p>
 </li>
 <li><p><strong>For sample 1</strong>: Its expenses on frozen and delicatessen are above average. The rest of the categories are not that close to their averages. Since it has bigger expenses on Fress and Frozen, maybe this could be a small restaurant (smaller than sample 0).</p>
 </li>
@@ -12225,7 +12225,7 @@ So I changed my answer an "above/below mean" + "close to it" analysis instead of
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Even though I ran the code for all features, I will be coosing "Fresh" which has a score of -1.516004. The fact that the Fresh category has a negative value means that it isn't much relevant to describe the data (actually is what less describes the data).</p>
+<p><strong>Answer:</strong> Even though I ran the code for all features, I will be coosing "Fresh" which has a score of -1.516004. The fact that the Fresh category has a negative value means that it isn't much relevant to describe the data (it is what less describes the data).</p>
 
 </div>
 </div>
@@ -19182,10 +19182,10 @@ K/P6CuUAAAAASUVORK5CYII=
 <p><strong>Answer:</strong> The first two dimensions explain 0.70 of the variance.</p>
 <p>If we do a break down in each dimension we get that:</p>
 <ul>
-<li><em>Dimension 1</em> has bigger (and positive) weights for Milk, Grocery and Detergents_Paper it is positively correlated with them, so it explains better the variance in those three. </li>
-<li><em>Dimension 2</em> is more positively correlated with Fresh, Frozen and Delicatessen (being Fresh, our most irrelevant feature, the most correlated)</li>
-<li><em>Dimension 3</em> can explain, more or less, the same variance as Dimension 2 (although not with the same weights it focus on the same less relevant features)</li>
-<li><em>Dimension4</em> has the most positive correlation with Frozen and also an almost as big negative correlation with Delicatessen</li>
+<li><strong>Dimension 1</strong> has bigger (and positive) weights for Milk, Grocery and Detergents_Paper it is positively correlated with them, so it explains better the variance in those three. </li>
+<li><strong>Dimension 2</strong> is more positively correlated with Fresh, Frozen and Delicatessen (being Fresh, our most irrelevant feature, the most correlated)</li>
+<li><strong>Dimension 3</strong> can explain, more or less, the same variance as Dimension 2 (although not with the same weights it focus on the same less relevant features)</li>
+<li><strong>Dimension 4</strong> has the most positive correlation with Frozen and also an almost as big negative correlation with Delicatessen</li>
 </ul>
 <p>In other words, if we did a Dimension Segments Mini Project we could argue that <strong>Dimension 1</strong> explains the top 3, away from 0, most relevant features (which makes sense by the definition on the Principal Component Analysis in itself and also complies with what we saw previously in Question 2). <strong>Dimensions 2 through 4</strong> focus on explaining the least relevant features. Finally, Dimensions 5 and 6 gives us a feel for each of the top 2 most relevant features/the most positevely correlated features in Dimension 1.</p>
 
