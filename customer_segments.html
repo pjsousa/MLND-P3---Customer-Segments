@@ -11764,6 +11764,9 @@ div#notebook {
 <p>In addition to implementing code, there will be questions that you must answer which relate to the project and your implementation. Each section where you will answer a question is preceded by a <strong>'Question X'</strong> header. Carefully read each question and provide thorough answers in the following text boxes that begin with <strong>'Answer:'</strong>. Your project submission will be evaluated based on your answers to each of the questions and the implementation you provide.</p>
 <blockquote><p><strong>Note:</strong> Code and Markdown cells can be executed using the <strong>Shift + Enter</strong> keyboard shortcut. In addition, Markdown cells can be edited by typically double-clicking the cell to enter edit mode.</p>
 </blockquote>
+<p><p></p></p>
+<blockquote><p><strong>Note:</strong> This is my second submission in order to review my answers to <strong>Questions 2 and 5</strong></p>
+</blockquote>
 
 </div>
 </div>
@@ -12225,7 +12228,7 @@ So I changed my answer an "above/below mean" + "close to it" analysis instead of
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Even though I ran the code for all features, I will be coosing "Fresh" which has a score of -1.516004. The fact that the Fresh category has a negative value means that it isn't much relevant to describe the data (it is what less describes the data).</p>
+<p><strong>Answer:</strong> Even though I ran the code for all features, I will be coosing "Fresh" which has a score of -1.516004. The fact that the Fresh category has a negative value means that it isn't a good fit to determine the rest of the dataset by it. Although, since we're not using R^2 to measure the goodness of fit of a classifier but one of the features relevance, this means that the Frozen feature is really unique and might prove relevant since it isn't easily described by other features.</p>
 
 </div>
 </div>
@@ -19179,15 +19182,22 @@ K/P6CuUAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> The first two dimensions explain 0.70 of the variance.</p>
+<p><strong>Answer:</strong> The first two dimensions explain 0.70 of the variance. The first four explain 0.92.</p>
+<p>For each Dimension we'll assume a strong correlation to each feature whenever its weight is close or beyhond 0.5 (positively correlated) or below -0.5 (negatively correlated).</p>
 <p>If we do a break down in each dimension we get that:</p>
 <ul>
-<li><strong>Dimension 1</strong> has bigger (and positive) weights for Milk, Grocery and Detergents_Paper it is positively correlated with them, so it explains better the variance in those three. </li>
-<li><strong>Dimension 2</strong> is more positively correlated with Fresh, Frozen and Delicatessen (being Fresh, our most irrelevant feature, the most correlated)</li>
-<li><strong>Dimension 3</strong> can explain, more or less, the same variance as Dimension 2 (although not with the same weights it focus on the same less relevant features)</li>
-<li><strong>Dimension 4</strong> has the most positive correlation with Frozen and also an almost as big negative correlation with Delicatessen</li>
+<li><strong>Dimension 1</strong> is strongly correlated to Detergents_paper. It is also postively (but somewhere around 0.4) correlated with Milk and Grocery. An increase along Dimension 1 will most probably mean an increase in spending in Detergents_paper and it is possible that it also "backed up" by a spending increase in both Grocery and Milk (but not as much as Detergents_paper).</li>
+<li><strong>Dimension 2</strong> is strongly correlated with spendings in Fresh and also with Frozen and Delicatessen (since they seem close to 0.5). When we observe an increase in Dimension 2 it will indicate an increase of spendings in those three product categories (clearl lead by Fresh, but not by as much as Detergents_paper leads on Dimension 1). </li>
+<li><strong>Dimension 3</strong> is strongly correlated with Fresh and Delicatessen. We will most definitively see an increase in Dimension 3 when spendings in fresh decrease (although negatively correlated, this is the strongest) at the same time we will see also some increase along Delicatessen. Since the positive and negative ranges are not balanced, it is dificult to tell directly from the chart, but it seems almost that Delicatessen and Frozen are close to be inverse correlated.</li>
+<li><strong>Dimension 4</strong> depicts spendings in Frozen vs Delicatessen Products. When we see an increase along Dimension 4 it will mean there were an increase in Fronzen products and a decrease in Delicatessen.</li>
 </ul>
-<p>In other words, if we did a Dimension Segments Mini Project we could argue that <strong>Dimension 1</strong> explains the top 3, away from 0, most relevant features (which makes sense by the definition on the Principal Component Analysis in itself and also complies with what we saw previously in Question 2). <strong>Dimensions 2 through 4</strong> focus on explaining the least relevant features. Finally, Dimensions 5 and 6 gives us a feel for each of the top 2 most relevant features/the most positevely correlated features in Dimension 1.</p>
+<p>Summarizing the increases in each dimension:</p>
+<ul>
+<li>Dimension 1 is about customers that spend a lot in Detergents_paper and also Milk and Grocery</li>
+<li>Dimension 2 is about customers that spend a lot and about the same in Fresh, Frozen and Delicatessen products</li>
+<li>Dimension 3 is about customers that spend a lot in Delicatessen but almost never spend anything in Fresh</li>
+<li>Dimension 4 is about customers that spend a lot in Frozen products</li>
+</ul>
 
 </div>
 </div>
